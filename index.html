@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Adriana Ferrari. Full Stack Developer</title>
+  </head>
+  <body>
+    <main>
+      <a href="https://wa.me/5491169598992" target="_blank"
+        ><img class="whatsapp" src="images/whatsapp.png" alt="whatsapp"
+      /></a>
+      <section id="first-section" class="first-section">
+        <nav>
+          <ul>
+            <a href="#first-section"><li>Home</li></a>
+            <a href=""><li>About Me</li></a>
+            <a href="#second-section"><li>Skills</li></a>
+            <a href="#third-section"><li>Projects</li></a>
+            <a href="#fourth-section""><li>Contact</li></a>
+          </ul>
+        </nav>
+        <article class="principal-data">
+          <div>
+            <h1>Adriana Ferrari</h1>
+            <h2>Full Stack Developer</h2>
+            <p>
+              I studied systems programming when we were 2 young women in a
+              classroom full of gentlemen. <br />
+              I taught computer science (software) when nobody else did. I owned
+              my own successful computer store. <br />
+              I built computers from 0 to 10. I have repaired hundreds of
+              networks, modems, motherboards, cabinets and more. <br />
+              I installed and configured all kinds of operating systems and
+              programs. Now I'm passionate about Back End <br />
+              and Machine Learning. I always loved computers. I am an eternal
+              student: it is never enough and it is never too late. <br />
+              Problem Solver.
+            </p>
+            <a href="https://github.com/adrifok" target="_blank"
+              ><img src="images/github.png" alt="to github"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/adriana-ferrari-dev/"
+              target="_blank"
+              ><img src="images/linkedin.png" alt="to linkedin"
+            /></a>
+          </div>
+          <img
+            class="vibrate"
+            src="images/develop.png"
+            alt="full stack development"
+          />
+        </article>
+      </section>
+      <section id="second-section" class="second-section">
+        <h1>MY TECH SKILLS</h1>
+        <ul class="slider">
+          <li>
+            <img src="images/skills/gcp.png" alt="google cloud platform" />
+          </li>
+          <li><img src="images/skills/github.png" alt="github" /></li>
+          <li><img src="images/skills/node.png" alt="node js" /></li>
+          <li><img src="images/skills/docker.png" alt="docker" /></li>
+          <li><img src="images/skills/kubernetes.png" alt="kubernetes" /></li>
+          <li><img src="images/skills/js.png" alt="javascript" /></li>
+          <li><img src="images/skills/react.png" alt="react js" /></li>
+          <li><img src="images/skills/postgre.png" alt="postgreSQL" /></li>
+          <li><img src="images/skills/sequelize.png" alt="sequelize" /></li>
+        </ul>
+      </section>
+
+      <section id="third-section" class="third-section">
+        <h1>< PROJECTS /></h1>
+        <ul>
+          <a href="https://www.footwear-fusion.com.ar/" target="_blank"><li><h2>&lt;/&gt;</h2><h3>Footwear Fusion</h3> <span>E-Commerce</span></li> </a>
+          <a href="https://weather-app-382517.rj.r.appspot.com/" target="_blank"><li><h2>&lt;/&gt;</h2><h3>Weather App</h3> <span>API REST App</span></li> </a>
+          <a href="https://appjunior.vercel.app/home" target="_blank"><li><h2>&lt;/&gt;</h2><h3>Junior For Juniors</h3> <span>Collab Project</span></li></a>
+          <a href="https://pokemon-api-phi-seven.vercel.app/" target="_blank"><li><h2>&lt;/&gt;</h2><h3>Pokemon App</h3> <span>API REST App</span></li> </a>
+          </a>
+        </ul>
+      </section>
+      <section id="fourth-section" class="fourth-section">
+        <h1>LET'S TALK</h1>
+        <div class="contact-form">
+          <form action="">
+            <div>
+              <input type="text" placeholder="Fullname">
+            <input type="text" placeholder="Phone">
+            </div>
+            <input type="text" placeholder="Email">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <button>SEND</button>
+          </form>
+        </div>
+      </section>
+      <footer>
+        <p>© 2023 Adriana Ferrari. All Rigths Reserved</p>
+      </footer>
+    </main>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
