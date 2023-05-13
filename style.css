@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap");
 
 html {
-    scroll-behavior: smooth;
-    
-  }
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -15,7 +14,7 @@ a {
   color: inherit;
 }
 a:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 li {
@@ -23,182 +22,240 @@ li {
 }
 
 ul {
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    padding: 50px;
-    gap: 40px;
-    font-size: 13pt;
-    font-weight: 400;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 50px;
+  gap: 40px;
+  font-size: 13pt;
+  font-weight: 400;
 }
 
-h1{
-    font-size: 40pt;
+h1 {
+  font-size: 40pt;
 }
 
-p{
-    font-size: 12pt;
-    line-height: 24pt;
-    font-weight: 100;
+p {
+  font-size: 12pt;
+  line-height: 24pt;
+  font-weight: 100;
 }
 
-section{
-    height: 100vh;
-    margin: 0 auto;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
+section {
+  height: 100vh;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
-footer{
-    color: #ffffff !important;
-    background: #000033 !important;
-    text-align: left;
-    padding: 10px 20px;
+footer {
+  color: #ffffff !important;
+  background: #000033 !important;
+  text-align: left;
+  padding: 10px 20px;
 }
 
-.whatsapp{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99999;
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999;
 }
 
-
-
-.vibrate{animation:vibrate 1.8s linear both infinite} @keyframes vibrate{0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}100%{transform:translate(0)}}
+.vibrate {
+  animation: vibrate 1.8s linear both infinite;
+}
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
 
 .first-section {
   color: #ffffff;
   background: url("images/bg-1.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-
 }
 
-.principal-data{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-evenly;
+.principal-data {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
 }
 
-.principal-data h1{
-    border-bottom: 1px solid #ffffff;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+.principal-data h1 {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
-.second-section{
-    height: 100vh;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
+.second-section {
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
 }
 
-.second-section h1, .fourth-section h1{
-    font-weight: 100;
+.second-section h1,
+.fourth-section h1 {
+  font-weight: 100;
 }
-
-
 
 .second-section ul {
   justify-content: center;
   gap: 100px;
+  align-items: center;
 }
 
-.second-section ul li:hover{
-    transform: scale(0.95);
+.second-section ul li:hover {
+  animation: none;
 }
 
-.third-section{
-    display: block;
-    color: #d9d9d9;
-    background: url("images/bg-2.jpg") no-repeat;
-    background-size: cover;
-}  
-
-.third-section h1{
-    font-weight: 100;
-    text-align: right;
-    padding-top: 100px;
-    padding-right: 200px;
+.second-section li {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
-.third-section ul{
-    text-align: center;
-    justify-content: center;
-    gap: 30px;
+.second-section li:nth-child(odd) {
+  animation-name: slide-up;
+}
+
+.second-section li:nth-child(even) {
+  animation-name: slide-down;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px); 
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.third-section {
+  display: block;
+  color: #d9d9d9;
+  background: url("images/bg-2.jpg") no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+
+.third-section h1 {
+  font-weight: 100;
+  text-align: right;
+}
+
+.third-section ul {
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 .third-section ul li {
-    background: #e56b00 ;
-    padding: 60px 80px;
-    border-radius: 40px;
+  background: #e56b00;
+  padding: 60px 80px;
+  border-radius: 40px;
 }
 
-.fourth-section{
-    background: rgb(112,112,112);
-background: linear-gradient(180deg, rgba(112,112,112,1) 0%, rgba(255,255,255,1) 10%);
-    padding: 90px 40px;
-    text-align: center;
+.fourth-section {
+  background: rgb(112, 112, 112);
+  background: linear-gradient(
+    180deg,
+    rgba(112, 112, 112, 1) 0%,
+    rgba(255, 255, 255, 1) 10%
+  );
+  padding: 90px 40px;
+  text-align: center;
 }
 
-.fourth-section h1{
-    font-size: 30pt;
-    font-weight: 100;
+.fourth-section h1 {
+  font-size: 30pt;
+  font-weight: 100;
 }
 
-.contact-form form{
-    padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-content: space-around;
-
+.contact-form form {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-content: space-around;
 }
 
-.contact-form form input{
-    font-family: "Roboto", sans-serif !important;
-    color: #000033;
-    font-size: 21pt;
-    font-weight: 100;
-    border-bottom: 1px solid #000033 !important;
-    border: none;
-    padding-bottom: 20px;
-    margin: 10px 20px;
+.contact-form form input {
+  font-family: "Roboto", sans-serif !important;
+  color: #000033;
+  font-size: 21pt;
+  font-weight: 100;
+  border-bottom: 1px solid #000033 !important;
+  border: none;
+  padding-bottom: 20px;
+  margin: 10px 20px;
 }
 
-.contact-form form textarea{
-    font-family: "Roboto", sans-serif !important;
-    color: #000033;
-    font-size: 21pt;
-    font-weight: 100;
-    border: none;
-    background: #f2f2f2;
-    padding: 20px;
-    border-radius: 15px;
-    resize: none;
+.contact-form form textarea {
+  font-family: "Roboto", sans-serif !important;
+  color: #000033;
+  font-size: 21pt;
+  font-weight: 100;
+  border: none;
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 15px;
+  resize: none;
 }
 
-.contact-form form button{
-    background: #000033;
-    color: #ffffff;
-    border: none;
-    font-size: 21pt;
-    font-weight: 100;
-    padding: 10px;
-    border-radius: 15px;
-    cursor: pointer;
+.contact-form form button {
+  background: #000033;
+  color: #ffffff;
+  border: none;
+  font-size: 21pt;
+  font-weight: 100;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
-.contact-form form button:hover{
-    transform: scale(0.98);
+.contact-form form button:hover {
+  transform: scale(0.98);
 }
-
