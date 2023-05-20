@@ -34,17 +34,18 @@ ul {
 }
 
 h1 {
-  font-size: 40pt;
+  font-size: 38pt;
 }
 
 p {
-  font-size: 12pt;
-  line-height: 24pt;
+  font-size: 10pt;
+  line-height: 22pt;
   font-weight: 100;
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
   margin: 0 auto;
   padding: 40px;
   display: flex;
@@ -89,6 +90,46 @@ footer {
   }
 }
 
+.menu-ppal{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu-ppal li{
+  position: relative;
+  display: inline-block;
+  padding: 4px 0;
+}
+
+.menu-ppal li::before,
+.menu-ppal li::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(225, 225, 225);
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
+.menu-ppal li::before{
+top: -3px;
+transform-origin: left;
+}
+
+.menu-ppal li::after{
+  bottom: -3px;
+  transform-origin: right;
+}
+
+.menu-ppal li:hover::before,
+.menu-ppal li:hover::after{
+  transform: scaleX(1);
+}
+
+
 .first-section {
   color: #ffffff;
   background: url("images/bg-1.jpg") no-repeat;
@@ -101,7 +142,6 @@ footer {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   justify-content: space-evenly;
 }
 
@@ -112,10 +152,9 @@ footer {
 }
 
 .second-section {
-  height: 100vh;
-  justify-content: center;
   text-align: center;
   padding: 0 20px;
+  justify-content: center;
 }
 
 .second-section h1,
@@ -125,7 +164,7 @@ footer {
 
 .second-section ul {
   justify-content: center;
-  gap: 100px;
+  gap: 50px;
   align-items: center;
 }
 
@@ -164,7 +203,7 @@ footer {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(4px); 
+    transform: translateY(4px);
   }
   100% {
     transform: translateY(0);
@@ -172,11 +211,11 @@ footer {
 }
 
 .third-section {
-  display: block;
+  display: flex;
   color: #d9d9d9;
-  background: url("images/bg-2.jpg") no-repeat;
+  background: url(images/bg-2.jpg) no-repeat;
   background-size: cover;
-  padding-bottom: 100px;
+  flex-wrap: nowrap;
 }
 
 .third-section h1 {
@@ -190,10 +229,26 @@ footer {
   gap: 30px;
 }
 
-.third-section ul li {
+.third-section ul a  {
+  background-color: #000033;
+  padding: 4px;
+  border-radius: 30px;
+  transition: .3s;
+}
+
+.third-section ul a li{
   background: #e56b00;
-  padding: 60px 80px;
-  border-radius: 40px;
+  padding: 20px 40px;
+  border-radius: 30px;
+  transition: .3s;
+}
+
+.third-section ul a:hover li{
+  background: none;
+  transform: scale(0.9);
+}
+.third-section ul a:active{
+  transform: scale(0.8);
 }
 
 .fourth-section {
@@ -203,8 +258,9 @@ footer {
     rgba(112, 112, 112, 1) 0%,
     rgba(255, 255, 255, 1) 10%
   );
-  padding: 90px 40px;
+  padding: 20px 140px;
   text-align: center;
+  align-items: center;
 }
 
 .fourth-section h1 {
@@ -213,19 +269,25 @@ footer {
 }
 
 .contact-form form {
-  padding: 40px 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+}
+
+.contact-form form div{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  align-content: space-around;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .contact-form form input {
   font-family: "Roboto", sans-serif !important;
   color: #000033;
-  font-size: 21pt;
+  font-size: 16pt;
   font-weight: 100;
   border-bottom: 1px solid #000033 !important;
   border: none;
@@ -236,13 +298,15 @@ footer {
 .contact-form form textarea {
   font-family: "Roboto", sans-serif !important;
   color: #000033;
-  font-size: 21pt;
+  font-size: 16pt;
   font-weight: 100;
   border: none;
   background: #f2f2f2;
   padding: 20px;
   border-radius: 15px;
   resize: none;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .contact-form form button {
